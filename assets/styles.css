@@ -29,6 +29,30 @@ hr {
   justify-content: space-between;
   padding: 10px;
 }
+.card .card_header .profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.card .card_header .avatar {
+  width: 32px;
+}
+.card .card_header .about .about_text {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+}
+.card .card_header .stats {
+  display: flex;
+  font-size: 14px;
+}
+.card .card_header .stats .stats_item {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+.card .card_header .stats .stats_item-number {
+  font-weight: 600;
+}
 .card .card_header_mobile {
   display: none;
 }
@@ -50,7 +74,7 @@ hr {
 .card .card_body #state:checked ~ .card_body-button img {
   transform: rotate(180deg);
 }
-.card .card_body .card_body-button {
+.card .card_body .card_body-button img {
   position: absolute;
   cursor: pointer;
   left: 50%;
@@ -64,35 +88,40 @@ hr {
   border-left: 2px solid #3498db;
   padding: 25px 25px 25px 0;
 }
-
-.profile {
+.card .card_footer .prediction {
+  line-height: 25px;
+}
+.card .card_footer .prediction .prediction_name,
+.card .card_footer .prediction .prediction_about {
+  padding-left: 22px;
+}
+.card .card_footer .prediction .prediction_name {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 12px;
+}
+.card .card_footer .prediction .prediction_about {
+  font-size: 18px;
+}
+.card .card_footer .rate {
   display: flex;
-  align-items: center;
   gap: 12px;
 }
-
-.avatar {
-  width: 32px;
+.card .card_footer .rate_mobile {
+  display: none;
 }
-
-.about_text {
-  color: rgba(0, 0, 0, 0.4);
-  font-size: 14px;
+.card .card_footer .stavka button {
+  width: 140px;
+  height: 40px;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  background-color: #3498db;
+  opacity: 0.9;
+  transition: all 0.3s;
+  cursor: pointer;
 }
-
-.stats {
-  display: flex;
-  font-size: 14px;
-}
-
-.stats_item {
-  display: flex;
-  flex-direction: column;
-  margin-right: 10px;
-}
-
-.stats_item-number {
-  font-weight: 600;
+.card .card_footer .stavka button:hover {
+  opacity: 1;
 }
 
 .stats_red {
@@ -105,49 +134,6 @@ hr {
 
 .stats_gray {
   color: rgba(0, 0, 0, 0.4);
-}
-
-.prediction {
-  line-height: 25px;
-}
-
-.prediction_name,
-.prediction_about {
-  padding-left: 22px;
-}
-
-.prediction_name {
-  color: rgba(0, 0, 0, 0.4);
-  font-size: 12px;
-}
-
-.prediction_about {
-  font-size: 18px;
-}
-
-.rate {
-  display: flex;
-  gap: 12px;
-}
-
-.rate_mobile {
-  display: none;
-}
-
-.stavka button {
-  width: 140px;
-  height: 40px;
-  border-radius: 4px;
-  border: none;
-  color: white;
-  background-color: #3498db;
-  opacity: 0.9;
-  transition: all 0.3s;
-  cursor: pointer;
-}
-
-.stavka button:hover {
-  opacity: 1;
 }
 
 @media only screen and (max-width: 744px) {
