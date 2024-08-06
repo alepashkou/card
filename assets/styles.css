@@ -1,0 +1,200 @@
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("./assets/fonts/proximanova.otf");
+}
+body {
+  background-color: rgb(203, 201, 200);
+  font-family: "Proxima Nova";
+  font-size: 16px;
+}
+
+hr {
+  color: rgba(0, 0, 0, 0.1019607843);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  max-width: 744px;
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+}
+.card .card_header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.card .card_header_mobile {
+  display: none;
+}
+.card .card_body {
+  padding: 10px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.card .card_body .card_body-content {
+  overflow: hidden;
+  height: 100px;
+  transition: all 0.5s ease-in-out;
+}
+.card .card_body #state:checked ~ .card_body-content {
+  height: 100%;
+}
+.card .card_body .card_body-button {
+  position: absolute;
+  cursor: pointer;
+  left: 49%;
+  opacity: 0.9;
+}
+.card .card_body .card_body-button:hover {
+  opacity: 1;
+}
+.card .card_footer {
+  background-color: #f0f1f2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border-left: 2px solid #3498db;
+  padding: 25px 25px 25px 0;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 32px;
+}
+
+.about_text {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+}
+
+.stats {
+  display: flex;
+  font-size: 14px;
+}
+
+.stats_item {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.stats_item-number {
+  font-weight: 600;
+}
+
+.stats_red {
+  color: #f64747;
+}
+
+.stats_green {
+  color: #62b435;
+}
+
+.stats_gray {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.prediction {
+  line-height: 25px;
+}
+
+.prediction_name,
+.prediction_about {
+  padding-left: 22px;
+}
+
+.prediction_name {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 12px;
+}
+
+.prediction_about {
+  font-size: 18px;
+}
+
+.rate {
+  display: flex;
+  gap: 12px;
+}
+
+.rate_mobile {
+  display: none;
+}
+
+.stavka button {
+  width: 140px;
+  height: 40px;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  background-color: #3498db;
+  opacity: 0.9;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.stavka button:hover {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 744px) {
+  .card .card_header {
+    display: none;
+  }
+  .card .card_header_mobile {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  .card .card_header_mobile .profile .about .about_text_mobile {
+    display: flex;
+    gap: 5px;
+  }
+  .card .card_header_mobile .stats_mobile {
+    display: flex;
+    flex-direction: column;
+  }
+  .card .card_header_mobile .stats_item-number {
+    font-weight: 400;
+  }
+  .card .card_footer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card .card_footer .prediction_name,
+  .card .card_footer .prediction_about {
+    padding-left: 14px;
+  }
+  .card .card_footer .prediction_about {
+    max-width: 223px;
+  }
+  .card .card_footer .rate {
+    display: none;
+  }
+  .card .card_footer .rate_mobile {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .card .card_footer .line-break {
+    width: 100%;
+  }
+  .card .card_footer .stavka button {
+    width: 289px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

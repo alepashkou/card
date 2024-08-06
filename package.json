@@ -1,0 +1,11 @@
+{
+  "name": "card",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss": "sass styles.scss:assets/styles.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
