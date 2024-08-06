@@ -69,7 +69,7 @@ hr {
   box-sizing: border-box;
 }
 .card .card_body #state:checked ~ .card_body-content {
-  max-height: 300px;
+  max-height: calc(100vh + 20px);
 }
 .card .card_body #state:checked ~ .card_body-button img {
   transform: rotate(180deg);
@@ -109,6 +109,11 @@ hr {
 .card .card_footer .rate_mobile {
   display: none;
 }
+.card .card_footer .stavka {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
 .card .card_footer .stavka button {
   width: 140px;
   height: 40px;
@@ -145,6 +150,10 @@ hr {
     justify-content: space-between;
     padding: 10px;
   }
+  .card .card_header_mobile .profile {
+    display: flex;
+    gap: 10px;
+  }
   .card .card_header_mobile .profile .about .about_text_mobile {
     display: flex;
     gap: 5px;
@@ -159,6 +168,7 @@ hr {
   .card .card_footer {
     flex-wrap: wrap;
     justify-content: center;
+    padding: 15px 0px 15px 0;
   }
   .card .card_footer .prediction_name,
   .card .card_footer .prediction_about {
@@ -179,6 +189,7 @@ hr {
     width: 100%;
   }
   .card .card_footer .stavka button {
+    max-width: 70%;
     width: 319px;
   }
 }
