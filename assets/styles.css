@@ -67,9 +67,11 @@ hr {
   max-height: 120px;
   transition: all 0.3s ease-in-out;
   box-sizing: border-box;
+  -webkit-mask-image: linear-gradient(0deg, transparent 1px, white 40px);
 }
 .card .card_body #state:checked ~ .card_body-content {
   max-height: calc(100vh + 20px);
+  -webkit-mask-image: linear-gradient(0deg, transparent 1px, white 0px);
 }
 .card .card_body #state:checked ~ .card_body-button img {
   transform: rotate(180deg);
@@ -169,12 +171,13 @@ hr {
     flex-wrap: wrap;
     justify-content: center;
     padding: 15px 0px 15px 0;
+    gap: 10px;
   }
-  .card .card_footer .prediction_name,
-  .card .card_footer .prediction_about {
-    padding-left: 14px;
+  .card .card_footer .prediction .prediction_name,
+  .card .card_footer .prediction .prediction_about {
+    padding-left: 0px;
   }
-  .card .card_footer .prediction_about {
+  .card .card_footer .prediction .prediction_about {
     max-width: 223px;
   }
   .card .card_footer .rate {
